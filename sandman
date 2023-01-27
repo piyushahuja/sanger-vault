@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+declare ROOT="/lustre/scratch119/humgen/teams/hgi/vault"
+declare BINARY="$(basename "$0")"
+
+source "${ROOT}/hgi-vault/.venv/bin/activate"
+
+export VAULTRC="${ROOT}/etc/vaultrc"
+exec "${BINARY}" "$@"
